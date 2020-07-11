@@ -29,9 +29,15 @@ return(
   <Layout>
     <SEO title="Home" />
     <Content>
-      {data.allMarkdownRemark.edges.map((edge)=>{
+      {data.allMarkdownRemark.edges.map((edge, index)=>{
         return(
-          <Card CardHeader={edge.node.frontmatter.title} CardContent={edge.node.internal.content}/>
+          <>
+          <Card CardHeader={edge.node.frontmatter.title} CardContent={edge.node.internal.content} index={index}/>
+          <Card CardHeader={edge.node.frontmatter.title} CardContent={edge.node.internal.content} index={index}/>
+          <Card CardHeader={edge.node.frontmatter.title} CardContent={edge.node.internal.content} index={index}/>
+          <Card CardHeader={edge.node.frontmatter.title} CardContent={edge.node.internal.content} index={index}/>
+          <Card CardHeader={edge.node.frontmatter.title} CardContent={edge.node.internal.content} index={index}/>
+          </>
         )
 
       })}

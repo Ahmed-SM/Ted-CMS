@@ -4,26 +4,27 @@ import React from "react"
 import styled from "styled-components"
 
 
-const Card = ({ CardHeader, CardContent }) => (
+const Card = ({ CardHeader, CardContent, index }) => (
   <StyledCard>
-     <div class="card-circle"><h1 class="circle-index">1</h1></div>
+     <div class="card-circle"><h1 class="circle-index">{index+1}</h1></div>
      <div class="card">
-         <h4>{CardContent}</h4>
+         <h4>{CardHeader}</h4>
          <p>{CardContent}</p>
      </div>
   </StyledCard>
 )
 export default Card;
 const StyledCard = styled.div`
-
+    max-width: 350px;
+    margin: 40px 10px 10px 25px;
     position: relative;
     width: fit-content;
-    height: 111px;
-    margin: 40px auto;
+    height: fit-content;
+ 
  
   .card{
   width: 100%;
-  height: 90px;
+
   background: #231F20;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

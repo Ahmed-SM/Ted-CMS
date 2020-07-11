@@ -5,8 +5,6 @@ import styled from "styled-components"
 
 const Content = ({ ViewTitle, ViewSubTitle, children }) => (
   <StyledContent>
-          <h1 class="title">RAK EDU ZONE</h1>
-          <h6 class="sub-title">Training . Empowerment . Development</h6>
           {children}
   </StyledContent>
 )
@@ -14,11 +12,13 @@ const Content = ({ ViewTitle, ViewSubTitle, children }) => (
 
 export default Content;
 const StyledContent = styled.div`
-    background: #FCE373;
-    flex-grow:1;
-    padding:0 25px;  
-
-
+    background: #FCE373; 
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width:1000px;
+    margin: 0 auto;
+    flex-wrap:wrap;
     .title {
     font-style: normal;
     font-weight: 300;
