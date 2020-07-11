@@ -1,12 +1,21 @@
+@font-face {
+  font-family: "Post No Bills Jaffna Light";
+  src: url("../fonts/PostNoBillsJaffna-Light_685e495311557d3acb7747091536e532.ttf") format("truetype")
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body, #___gatsby, #gatsby-focus-wrapper {
+  display:flex;
+  justify-content:center;
+  height: 100%;
+  Background:#231F20;
+  margin:0;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
 article,
 aside,
