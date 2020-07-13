@@ -33,10 +33,6 @@ return(
         return(
           <>
           <Card CardHeader={edge.node.frontmatter.title} CardContent={edge.node.internal.content} index={index}/>
-          <Card CardHeader={edge.node.frontmatter.title} CardContent={edge.node.internal.content} index={index}/>
-          <Card CardHeader={edge.node.frontmatter.title} CardContent={edge.node.internal.content} index={index}/>
-          <Card CardHeader={edge.node.frontmatter.title} CardContent={edge.node.internal.content} index={index}/>
-          <Card CardHeader={edge.node.frontmatter.title} CardContent={edge.node.internal.content} index={index}/>
           </>
         )
 
