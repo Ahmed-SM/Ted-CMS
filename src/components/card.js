@@ -15,7 +15,6 @@ const Card = ({ CardHeader, CardContent, index }) => (
 )
 export default Card;
 const StyledCard = styled.div`
-    max-width: 350px;
     margin: 40px 10px 10px 25px;
     position: relative;
     width: fit-content;
@@ -23,8 +22,10 @@ const StyledCard = styled.div`
  
  
   .card{
+  min-width: 320px;
+  max-width: 320px;
   width: 100%;
-
+  min-height: 100px;
   background: #231F20;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
