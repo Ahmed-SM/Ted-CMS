@@ -26,7 +26,7 @@ const StyledCard = styled.div`
   max-width: 320px;
   width: 100%;
   min-height: 100px;
-  background: #231F20;
+  background: #B68A35;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   
@@ -39,7 +39,7 @@ const StyledCard = styled.div`
     height: 66px;
     border-radius:66px;
     background: #F2F2F2;
-    border: 3px solid #231F20;
+    border: 3px solid #B68A35;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     z-index:1;
     text-align: center;
@@ -66,7 +66,7 @@ const StyledCard = styled.div`
     line-height: 70px;
     font-size: 36px;
     text-align: center;
-    color: #000000;
+    color: #B68A35;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 `;

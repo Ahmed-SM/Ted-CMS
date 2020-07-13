@@ -99,7 +99,7 @@ const StyledNavbar = styled.nav`
   font-weight: 300;
   font-size: 18px;
   font-family: Post No Bills Jaffna Light;
-  margin-bottom:40px;
+  margin-bottom:80px;
 
   .tab{
     color:white;
@@ -109,12 +109,14 @@ const StyledNavbar = styled.nav`
   }
   .logo{
     position: relative;
-
     margin-top:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     width: 66px;
     height: 66px;
     border-radius:66px;
-    background: #333;
+    background: #cc4e4e;
     border: 3px solid #B68A35;
     z-index:1;
   }
@@ -134,7 +136,6 @@ const StyledNavbar = styled.nav`
   .logo h1{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin:0;
-    margin-top:14px;
     text-align: center;
     font-weight: 300;
     font-size: 24px;
