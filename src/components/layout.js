@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
           <div class="tab">Tab1</div>
           <div class="tab">Tab2</div>
           <div class="logo">
-          <h1>Ted</h1>
+          <h1>ted</h1>
           <span class="small-circle">u</span>
           </div>
           <div class="tab">Tab3</div>
