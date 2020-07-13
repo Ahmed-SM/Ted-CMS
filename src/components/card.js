@@ -7,7 +7,7 @@ import styled from "styled-components"
 const Card = ({ CardHeader, CardContent, index }) => (
   <StyledCard>
      <div class="card-circle"><h1 class="circle-index">{index+1}</h1></div>
-     <div class="card">
+     <div class="card" dir="auto">
          <h4>{CardHeader}</h4>
          <p>{CardContent}</p>
      </div>
@@ -51,18 +51,17 @@ const StyledCard = styled.div`
     font-size: 24px;
     text-align: center;
     padding-top: 5px;
-    font-family: Post No Bills Jaffna Light;
+    font-family: 'Tajawal', sans-serif;
     color: #F2F2F2;
   }
   .card p{
-    margin:0;
-    margin-left:15px;
+    margin:4px 15px;
     color: #F2F2F2;
-    font-family: Post No Bills Jaffna Light;
+    font-family: 'Tajawal', sans-serif;
   }
   .circle-index {
     font-weight: 300;
-    font-family: Post No Bills Jaffna Light;
+    font-family: 'Tajawal', sans-serif;
     margin: 0;
     line-height: 70px;
     font-size: 36px;
