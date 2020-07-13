@@ -38,7 +38,7 @@ const StyledCard = styled.div`
     width: 66px;
     height: 66px;
     border-radius:66px;
-    background: #FCE373;
+    background: #F2F2F2;
     border: 3px solid #231F20;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     z-index:1;
@@ -52,12 +52,12 @@ const StyledCard = styled.div`
     text-align: center;
     padding-top: 5px;
     font-family: Post No Bills Jaffna Light;
-    color: #FCE373;
+    color: #F2F2F2;
   }
   .card p{
     margin:0;
     margin-left:15px;
-    color: #FCE373;
+    color: #F2F2F2;
     font-family: Post No Bills Jaffna Light;
   }
   .circle-index {

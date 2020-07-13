@@ -59,7 +59,7 @@ const StyledContainer = styled.div`
   display:flex;
   flex-direction:column;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background:  #FCE373;
+  background:  #F2F2F2;
   height: 100%;
   
   .title {
@@ -94,7 +94,7 @@ const StyledNavbar = styled.nav`
   align-items:center;
   width: 100%;
   height: 54px;
-  background: #CCA69A;
+  background: #B68A35;
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
@@ -102,6 +102,7 @@ const StyledNavbar = styled.nav`
   margin-bottom:40px;
 
   .tab{
+    color:white;
     text-align: center;
     width: 50px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -113,8 +114,8 @@ const StyledNavbar = styled.nav`
     width: 66px;
     height: 66px;
     border-radius:66px;
-    background: #cc4e4e;
-    border: 3px solid #CCA69A;
+    background: #333;
+    border: 3px solid #B68A35;
     z-index:1;
   }
   .logo .small-circle{

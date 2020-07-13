@@ -12,7 +12,7 @@ const Content = ({ ViewTitle, ViewSubTitle, children }) => (
 
 export default Content;
 const StyledContent = styled.div`
-    background: #FCE373; 
+    background: #F2F2F2; 
     display:flex;
     justify-content: space-around;
     align-items: center;
