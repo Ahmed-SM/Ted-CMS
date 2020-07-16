@@ -28,14 +28,14 @@ const Layout = ({ children }) => {
     <>
       <StyledContainer>
         <StyledNavbar>
-          <div class="tab">تعريف</div>
-          <div class="tab">اتصل بنا</div>
+          <div class="tab">بوابتي</div>
+          <div class="tab">شركاؤنا</div>
           <div class="logo">
           <h1>ted</h1>
           <span class="small-circle">u</span>
           </div>
-          <div class="tab">اخرى</div>
-          <div class="tab">روابط مهمة</div>
+          <div class="tab">المكتبة الرقمية</div>
+          <div class="tab">تواصل معنا</div>
         </StyledNavbar>
         <h1 class="title">RAK EDU ZONE</h1>
         <h6 class="sub-title">Training . Empowerment . Development</h6>
@@ -105,7 +105,7 @@ const StyledNavbar = styled.nav`
     font-family: 'Tajawal', sans-serif;
     color:white;
     text-align: center;
-    width: 100px;
+    width: 120px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   .logo{
