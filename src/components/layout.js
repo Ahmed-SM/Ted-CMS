@@ -45,6 +45,8 @@ const Layout = ({ children }) => {
         <h1 class="title">RAK EDU ZONE</h1>
         <h6 class="sub-title">Training . Empowerment . Development</h6>
         {children}
+        <StyledFooter>
+        </StyledFooter>
       </StyledContainer>
     </>
   )
@@ -63,9 +65,8 @@ const StyledContainer = styled.div`
   width:100%;
   display:flex;
   flex-direction:column;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background:  #f0f0eb;
-  height: 100%;
+  height: fit-content;
   
   .title {
     font-style: normal;
@@ -173,5 +174,23 @@ const StyledNavbar = styled.nav`
     color: white;
     font-family: Post No Bills Jaffna Light;
   }
+
+`
+const StyledFooter = styled.footer`
+  position: fixed;
+  bottom:0;
+  display:flex;
+  z-index:2;
+  flex-direction:row-reverse;
+  justify-content:space-around;
+  align-items:center;
+  width: 100%;
+  height: 44px;
+  background: #B68A35;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: Post No Bills Jaffna Light;
+
 
 `

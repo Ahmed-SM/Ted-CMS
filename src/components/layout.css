@@ -15,9 +15,10 @@ body,
 #___gatsby,
 #gatsby-focus-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: stretch;
+  flex-flow: column;
   height: 100%;
-  Background: #F2F2F2;
+  background:  #f0f0eb;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
