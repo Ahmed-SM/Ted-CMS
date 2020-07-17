@@ -55,7 +55,7 @@ const StyledCard = styled.div`
     font-weight: 300;
     font-size: 24px;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 20px;
     font-family: 'Tajawal', sans-serif;
     color: #F2F2F2;
   }

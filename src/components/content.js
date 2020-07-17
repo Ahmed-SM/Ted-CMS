@@ -4,7 +4,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Content = ({ ViewTitle, ViewSubTitle, children }) => (
-  <StyledContent>
+  <StyledContent >
           {children}
   </StyledContent>
 )
@@ -15,7 +15,7 @@ const StyledContent = styled.div`
     background: #F2F2F2; 
     display:flex;
     flex-wrap:wrap;
-    flex-direction: row;
+    flex-direction: row-reverse;
     width:100%;
     justify-content: space-around;
     align-items: space-around;
