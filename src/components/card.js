@@ -35,6 +35,7 @@ const StyledCard = styled.div`
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   
+  
   }
   .card-circle{
     position: absolute;
@@ -63,6 +64,8 @@ const StyledCard = styled.div`
     margin:4px 15px;
     color: #F2F2F2;
     font-family: 'Tajawal', sans-serif;
+    padding:0px 10px;
+
   }
   .circle-index {
     font-weight: 300;
