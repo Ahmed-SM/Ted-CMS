@@ -37,6 +37,11 @@ const Layout = ({ children }) => {
           <div class="tab">المكتبة الرقمية</div>
           <div class="tab">تواصل معنا</div>
         </StyledNavbar>
+        {/* <div class="fullscreen-video-wrap">
+      <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" autoplay="" loop="true">
+    </video>
+    <div class="header-overlay"></div>
+    </div> */}
         <h1 class="title">RAK EDU ZONE</h1>
         <h6 class="sub-title">Training . Empowerment . Development</h6>
         {children}
@@ -59,7 +64,7 @@ const StyledContainer = styled.div`
   display:flex;
   flex-direction:column;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background:  #F2F2F2;
+  background:  #f0f0eb;
   height: 100%;
   
   .title {
@@ -85,10 +90,35 @@ const StyledContainer = styled.div`
     color: #000000;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+  .fullscreen-video-wrap{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+  }
+  
+  .fullscreen-video-wrap video{
+    min-height:100%;
+    min-width:100%;
+  }
+  .header-overlay{
+    height:100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    z-index:1;
+    background:#000000;
+    opacity:0.85;
+  }
+  
 
 `
 const StyledNavbar = styled.nav`
   display:flex;
+  z-index:2;
   flex-direction:row-reverse;
   justify-content:space-around;
   align-items:center;

@@ -26,7 +26,8 @@ const StyledCard = styled.div`
     width: 100%;
     height: 275px;
     min-height: 200px;
-
+    z-index:2;
+    margin: 0 20px;
   .boneless{
     text-decoration: none;
   }
@@ -37,9 +38,10 @@ const StyledCard = styled.div`
   align-content: center;
   height: 175px;
   min-height: 100px;
-  background: #B68A35;
+  background: white;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-bottom: 30px solid #B68A35;
   
   
   }
@@ -66,9 +68,9 @@ const StyledCard = styled.div`
     font-weight: 300;
     font-size: 24px;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 30px;
     font-family: 'Tajawal', sans-serif;
-    color: #F2F2F2;
+    color: #333;
   }
   .card p{
     margin:4px 15px;
