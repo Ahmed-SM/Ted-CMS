@@ -17,20 +17,19 @@ const Card = ({ CardHeader, CardContent, index, path }) => (
 )
 export default Card;
 const StyledCard = styled.div`
-    margin: 60px auto 10px auto;
-    position: relative;
-    width: fit-content;
-    height: fit-content;
 
- 
+    position: relative;
+    min-width: 320px;
+    max-width: 320px;
+    width: 100%;
+    height: 275px;
+    min-height: 200px;
+
   .boneless{
     text-decoration: none;
   }
   .card{
-  padding-top:10px;
-  min-width: 320px;
-  max-width: 320px;
-  width: 100%;
+  height: 175px;
   min-height: 100px;
   background: #B68A35;
   border-radius: 10px;

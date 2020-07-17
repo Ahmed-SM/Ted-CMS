@@ -14,11 +14,15 @@ export default Content;
 const StyledContent = styled.div`
     background: #F2F2F2; 
     display:flex;
-    justify-content: space-between;
-    align-items: space-between;
-    
-
     flex-wrap:wrap;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-around;
+    align-items: space-around;
+    align-content: space-around;
+    margin: 60px 0 10px 0;
+    padding: 0 20px;
+
     .title {
     font-style: normal;
     font-weight: 300;
