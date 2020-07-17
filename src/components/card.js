@@ -2,15 +2,17 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBowlingBall } from '@fortawesome/free-solid-svg-icons';
 
 const Card = ({ CardHeader, CardContent, index, path }) => (
   <StyledCard>
     <Link className="boneless" to={path}>
-      <div class="card-circle"><h1 class="circle-index">{index+1}</h1></div>
-      <div class="card" dir="auto">
+      <div className="card-circle">
+        <FontAwesomeIcon icon={faBowlingBall} color={"#333"} size={"3x"}/>
+      </div>
+      <div className="card" dir="auto">
           <h4>{CardHeader}</h4>
-          <p>{CardContent}</p>
       </div>
     </Link>
   </StyledCard>
@@ -29,6 +31,10 @@ const StyledCard = styled.div`
     text-decoration: none;
   }
   .card{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   height: 175px;
   min-height: 100px;
   background: #B68A35;
@@ -40,15 +46,19 @@ const StyledCard = styled.div`
   .card-circle{
     position: absolute;
     top:-50px;
-    left:40%;
-    width: 66px;
-    height: 66px;
+    left:35%;
+    width: 96px;
+    height: 96px;
     border-radius:66px;
     background: #F2F2F2;
     border: 3px solid #B68A35;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     z-index:1;
     text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
   .card h4{
     font-style: normal;
@@ -56,7 +66,7 @@ const StyledCard = styled.div`
     font-weight: 300;
     font-size: 24px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 5px;
     font-family: 'Tajawal', sans-serif;
     color: #F2F2F2;
   }

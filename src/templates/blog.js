@@ -2,12 +2,29 @@ import React from "react"
 import Layout from "../components/layout"
 import Content from "../components/content"
 import Card from "../components/card"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Blog = () => {
+export const data = graphql`
+query(
+  $slug: String!
+) {
+    markdownRemark(
+      fields:{
+        slug:{
+          eq:$slug
+        }}){
+          frontmatter{
+            title
+          }
+          html
+        }
+      }
+`
+const Blog = (props) => {
   return(
     <Layout>
       <Content>
-        <Card CardHeader={"test"} CardContent={"test"} index={"1"}/>
+        <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}} />
       </Content>
     </Layout>
   )}
