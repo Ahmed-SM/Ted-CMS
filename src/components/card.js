@@ -28,6 +28,12 @@ const StyledCard = styled.div`
     min-height: 200px;
     z-index:2;
     margin: 0 20px;
+    transition: transform 0.5s ease-in-out;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+
   .boneless{
     text-decoration: none;
   }
@@ -43,7 +49,6 @@ const StyledCard = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-bottom: 30px solid #B68A35;
   
-  
   }
   .card-circle{
     position: absolute;
@@ -52,7 +57,7 @@ const StyledCard = styled.div`
     width: 96px;
     height: 96px;
     border-radius:66px;
-    background: #F2F2F2;
+ 
     border: 3px solid #B68A35;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     z-index:1;
@@ -65,7 +70,7 @@ const StyledCard = styled.div`
   .card h4{
     font-style: normal;
     margin: 0;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 24px;
     text-align: center;
     padding-top: 30px;
