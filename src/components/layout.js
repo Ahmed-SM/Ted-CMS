@@ -176,6 +176,7 @@ const StyledNavbar = styled.nav`
   }
   .menu{
     display:flex;
+    flex-direction:row-reverse;
   }
   img{
     margin:0px 0;
