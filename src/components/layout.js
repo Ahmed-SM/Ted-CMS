@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import ted from '../images/ted.png'; 
 
 import Header from "./header"
 import "./layout.css"
@@ -28,22 +29,21 @@ const Layout = ({ children }) => {
     <>
       <StyledContainer>
         <StyledNavbar>
-          <div class="tab">بوابتي</div>
-          <div class="tab">شركاؤنا</div>
-          <div class="logo">
-          <h1>ted</h1>
-          <span class="small-circle">u</span>
+          <div className="img">
+            <img src={ted} alt="Logo" width={300} />
           </div>
-          <div class="tab">المكتبة الرقمية</div>
-          <div class="tab">تواصل معنا</div>
+          <div class="menu">
+            <div class="tab">بوابتي</div>
+            <div class="tab">شركاؤنا</div>
+            <div class="tab">المكتبة الرقمية</div>
+            <div class="tab">تواصل معنا</div>
+          </div>
         </StyledNavbar>
         {/* <div class="fullscreen-video-wrap">
       <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" autoplay="" loop="true">
     </video>
     <div class="header-overlay"></div>
     </div> */}
-        <h1 class="title">RAK EDU ZONE</h1>
-        <h6 class="sub-title">Training . Empowerment . Development</h6>
         {children}
         <StyledFooter>
         </StyledFooter>
@@ -119,18 +119,18 @@ const StyledContainer = styled.div`
 `
 const StyledNavbar = styled.nav`
   display:flex;
-  z-index:2;
-  flex-direction:row-reverse;
+  flex-direction:column;
   justify-content:space-around;
   align-items:center;
   width: 100%;
-  height: 54px;
+  border-radius:0 0 66px 66px;
   background: #B68A35;
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   font-family: Post No Bills Jaffna Light;
   margin-bottom:80px;
+  padding:20px 0;
 
   .tab{
     font-family: 'Tajawal', sans-serif;
@@ -174,6 +174,16 @@ const StyledNavbar = styled.nav`
     color: white;
     font-family: Post No Bills Jaffna Light;
   }
+  .menu{
+    display:flex;
+  }
+  img{
+    margin:0px 0;
+  }
+  .img{
+    text-align:right;
+  }
+  
 
 `
 const StyledFooter = styled.footer`
