@@ -24,7 +24,7 @@ const Blog = (props) => {
   return(
     <Layout>
       <Content>
-        <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}} />
+        <div className={"align"} dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}} />
       </Content>
     </Layout>
   )}
