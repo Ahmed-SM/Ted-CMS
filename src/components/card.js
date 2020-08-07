@@ -27,7 +27,7 @@ const StyledCard = styled.div`
     height: 275px;
     min-height: 200px;
     z-index:2;
-    margin: 0 20px;
+
     transition: transform 0.5s ease-in-out;
 
     &:hover{
