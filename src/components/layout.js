@@ -5,7 +5,8 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState, useRef, useEffect } from 'react';
+import "react-multi-carousel/lib/styles.css";
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
@@ -13,7 +14,8 @@ import ted from '../images/ted.png';
 import main2 from '../assets/main2.png'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMars } from '@fortawesome/free-solid-svg-icons';
-
+import Card from "./card";
+import ServicesCarousel from "./carousel";
 import Header from "./header"
 import "./layout.css"
 
@@ -28,23 +30,22 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
   return (
     <>
     <StyledHeader>
       <div className="img">
         <img src={ted} alt="Logo" width={250} />
       </div>
-      <div class="menuWrapper">
-        <div class="menu">
-          <div class="tab">الرئيسية</div>
-          <div class="tab">حول</div>
-          <div class="tab">المجالات</div>
-          <div class="tab">المكتبة الرقمية</div>
-          <div class="tab">فكرة</div>
-          <div class="tab">المركز الإعلامي</div>
-          <div class="tab">روابط مهمة</div>
-          <div class="tab">تواصل معانا</div>
+      <div className="menuWrapper">
+        <div className="menu">
+          <div className="tab">الرئيسية</div>
+          <div className="tab">حول</div>
+          <div className="tab">المجالات</div>
+          <div className="tab">المكتبة الرقمية</div>
+          <div className="tab">فكرة</div>
+          <div className="tab">المركز الإعلامي</div>
+          <div className="tab">روابط مهمة</div>
+          <div className="tab">تواصل معانا</div>
         </div>
       </div>
       <div className="buttonsWrapper">
@@ -63,26 +64,11 @@ const Layout = ({ children }) => {
       </div>
     </div>
     </StyledContent>
-    <StyledContent height={"fit-content"} color={"white"} flexDirection={"column"}>
-      <h2 className={"content-header--red"}><span className={"normal"}>المجالات</span> التعليمية </h2>
-      <div className={"flex"}>
-        <StyledCard>
-          <StyledImgWrapper>
-
-          </StyledImgWrapper>
-        </StyledCard>
-        <StyledCard>
-          <StyledImgWrapper>
-
-          </StyledImgWrapper>
-        </StyledCard>
-        <StyledCard>
-          <StyledImgWrapper>
-
-          </StyledImgWrapper>
-        </StyledCard>
-      </div>
-    </StyledContent>
+        <ServicesCarousel header={ <h2 className={"content-header--red"}><span className={"normal"}>المجالات</span> التعليمية </h2>}>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </ServicesCarousel>
     <StyledContent color={"linear-gradient(269.68deg, #BA9A5A 0.06%, rgba(186, 154, 58, 0.87) 99.93%)"} flexDirection={"column"}>
     <h2 className={"content-header--white"}><span className={"normal"}>كيفية</span> التعلم </h2>
     <div>
@@ -93,29 +79,25 @@ const Layout = ({ children }) => {
       <FontAwesomeIcon icon={faMars} color={"white"} size={"10x"} rotation={270}/>
     </div>
     </StyledContent>
-    <StyledContent height={"fit-content"} color={"white"} flexDirection={"column"}>
-      <h2 className={"content-header--red"}><span className={"normal"}>أخر</span> الأخبار </h2>
-      <div className={"flex"}>
-          <StyledCard>
-            <StyledImgWrapper>
-
-            </StyledImgWrapper>
-          </StyledCard>
-          <StyledCard>
-            <StyledImgWrapper>
-
-            </StyledImgWrapper>
-          </StyledCard>
-          <StyledCard>
-            <StyledImgWrapper>
-
-            </StyledImgWrapper>
-          </StyledCard>
-        </div>
-    </StyledContent>
+      <ServicesCarousel header={ <h2 className={"content-header--red"}><span className={"normal"}>أخر</span> الأخبار </h2>}>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </ServicesCarousel>
     <StyledContent height={"250px"}></StyledContent>
     <StyledFooter>
-       <img src={ted} alt="Logo" width={250} />
+      <div>
+        <img src={ted} alt="Logo" width={170} />
+      </div>
+      <div>
+        جميع الحقوق محفوظة منطقة رأس الخيمة التعليمة
+      </div>
+      <div>
+       منطقة رأس الخيمة التعليمة
+      </div>
+      <div>
+       منطقة رأس الخيمة التعليمة
+      </div>
     </StyledFooter>
     </>
   )
@@ -166,6 +148,12 @@ background: #FFFFFF;
 box-shadow: 0px -1px 4px #BA9A5A;
 height: 108px;
 z-index:10;
+display:flex;
+justify-content:space-around;
+align-items:center;
+img{
+  margin-bottom:0;
+}
 `;
 const StyledContent = styled.div`
 height: ${props => props.height ? props.height : "341px"};
@@ -180,6 +168,9 @@ padding: 30px 0;
   align-items:center;
   justify-content:center;
   flex-wrap: wrap;
+  transform: ${props => props.translateX ? props.translateX : "translateX(0px)"};
+  transition: transform 1s ease-in-out;
+
 }
 .flex-main{
   display:flex;
@@ -204,6 +195,37 @@ padding: 30px 0;
         font-weight:500;
       }
     }
+    .testing{
+      margin:0 20px;
+      overflow:hidden;
+      flex-wrap: nowrap;
+      width:fit-content;
+    }
+  img{
+    margin-bottom:0;
+  }
+  overflow:hidden;
+`;
+const StyledCarousel = styled.div`
+height: ${props => props.height ? props.height : "341px"};
+background: ${props => props.color ? props.color : "#dbe7f0"};
+display:flex;
+flex-direction:${props => props.flexDirection ? props.flexDirection : "row"};
+padding: 30px 0;
+text-align: center;
+.content-header--red{
+  color:crimson;
+  .normal{
+    font-weight:500;
+  }
+}
+    .content-header--white{
+      color:white;
+      .normal{
+        font-weight:500;
+      }
+    }
+
 `;
 const StyledButton = styled.button`
   background: linear-gradient(90deg, #DC143C 0%, #B70025 100%);
@@ -401,3 +423,37 @@ const StyledNavbar = styled.nav`
   //       <StyledFooter>
   //       </StyledFooter>
   //     </StyledContainer>
+
+  const servicesList = [
+    {
+      Title: "حالة طلباتي",
+      Description:
+        "تشمل طلبات القرطاسية صيانة المكتب والمعدات الأخرى في المكتب..",
+    },
+    {
+      Title: "طلبات متنوعة",
+      Description:
+        "تشمل طلبات القرطاسية صيانة المكتب والمعدات الأخرى في المكتب..",
+    },
+    {
+      Title: "طلبات من مكتب التطوير المؤسسي",
+      Description: "",
+    },
+    {
+      Title: "طلبات من قسم الاتصال المؤسسي",
+      Description: "",
+    },
+    {
+      Title: " طلبات من قسم الموارد البشرية",
+      Description: "",
+    },
+    {
+      Title: "طلبات من قسم الخدمات الإدارية",
+      Description: "",
+    },
+    {
+      Title: "مكتبي",
+      Description:
+        " تشمل طلبات القرطاسية صيانة المكتب والمعدات الأخرى في المكتب..",
+    },
+  ];

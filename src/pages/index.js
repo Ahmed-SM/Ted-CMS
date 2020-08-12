@@ -31,14 +31,7 @@ return(
   <Layout>
     <SEO title="Home" />
     <Content>
-      {data.allMarkdownRemark.edges.map((edge, index)=>{
-        return(
-          <>
-          <Card CardHeader={edge.node.frontmatter.title} CardContent={edge.node.internal.content} index={index} path={`${edge.node.fields.slug}`}/>
-          </>
-        )
 
-      })}
     </Content>
   </Layout>
 )}
