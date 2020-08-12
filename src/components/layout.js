@@ -20,7 +20,7 @@ import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  document.body.dir="rtl";
+  // document.body.dir="rtl";
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
