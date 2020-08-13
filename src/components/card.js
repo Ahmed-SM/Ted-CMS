@@ -8,7 +8,7 @@ const Card = ({title}) => (
       <StyledImgWrapper>
 
       </StyledImgWrapper>
-      <h3>قراءة في كتاب {title}</h3>
+      <h3>{title}</h3>
       <div className="buttonsWrapper">
         <StyledButton>أبدء</StyledButton>
       </div>

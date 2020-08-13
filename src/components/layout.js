@@ -65,9 +65,9 @@ const Layout = ({ children }) => {
     </div>
     </StyledContent>
         <ServicesCarousel header={ <h2 className={"content-header--red"}><span className={"normal"}>المجالات</span> التعليمية </h2>}>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+        <Card title={"مهارات"}></Card>
+        <Card title={"قراءة في كتاب "}></Card>
+        <Card title={"ساعة معرفة"}></Card>
       </ServicesCarousel>
     <StyledContent color={"linear-gradient(269.68deg, #BA9A5A 0.06%, rgba(186, 154, 58, 0.87) 99.93%)"} flexDirection={"column"}>
     <h2 className={"content-header--white"}><span className={"normal"}>كيفية</span> التعلم </h2>
@@ -80,9 +80,9 @@ const Layout = ({ children }) => {
     </div>
     </StyledContent>
       <ServicesCarousel header={ <h2 className={"content-header--red"}><span className={"normal"}>أخر</span> الأخبار </h2>}>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+        <Card title={"الخبر الأول"}></Card>
+        <Card title={"الخبر الثاني"}></Card>
+        <Card title={"الخبر الثالث"}></Card>
       </ServicesCarousel>
     <StyledContent height={"250px"}></StyledContent>
     <StyledFooter>
