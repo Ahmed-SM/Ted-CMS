@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
           <div className="tab">فكرة</div>
           <div className="tab">المركز الإعلامي</div>
           <div className="tab">روابط مهمة</div>
-          <div className="tab">تواصل معانا</div>
+          <div className="tab">تواصل معنا</div>
         </div>
       </div>
       <div className="buttonsWrapper">
