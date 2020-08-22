@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight,  faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import styled from "styled-components";
 
 
@@ -32,11 +34,15 @@ const ServicesCarousel = ({ children, header }) => {
   return (
     <StyledContent height={"fit-content"} color={"white"} flexDirection={"column"}>
      {header}
-      <button  onClick={handleRightMove} ></button>
-      <div ref={ButtonRef} className={"flex testing"}>
+     <div  className={"flex"}>
+      <FontAwesomeIcon icon={faAngleRight} color={"#989898"} size={"3x"}  onClick={handleRightMove}/>
+       <div className={"overflow"}>
+        <div ref={ButtonRef} className={"flex testing"}>
           {children}
         </div>
-        <button  onClick={handleLeftMove} ></button>
+       </div>
+       <FontAwesomeIcon icon={faAngleLeft} color={"#989898"} size={"3x"}  onClick={handleLeftMove}/>
+     </div>
  
     </StyledContent>
   );
@@ -55,7 +61,7 @@ padding: 30px 0;
   width:100%;
   align-items:center;
   justify-content:center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   transform: translateX(0px);
   transition: transform 1s ease-in-out;
 
@@ -73,13 +79,20 @@ padding: 30px 0;
       }
     }
     .testing{
-      margin:0 20px;
-      overflow:hidden;
+
       flex-wrap: nowrap;
-      width:fit-content;
+ 
     }
   img{
     margin-bottom:0;
+  }
+  .overflow{
+    overflow:hidden;
+    width:960px;  
+    margin:0 20px;
+  }
+  button{
+    z-index:1;
   }
   overflow:hidden;
 `;

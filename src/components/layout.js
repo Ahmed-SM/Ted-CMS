@@ -33,24 +33,26 @@ const Layout = ({ children }) => {
   return (
     <>
     <StyledHeader>
-      <div className="img">
-        <img src={ted} alt="Logo" width={250} />
-      </div>
-      <div className="menuWrapper">
-        <div className="menu">
-          <div className="tab">الرئيسية</div>
-          <div className="tab">حول</div>
-          <div className="tab">المجالات</div>
-          <div className="tab">المكتبة الرقمية</div>
-          <div className="tab">فكرة</div>
-          <div className="tab">المركز الإعلامي</div>
-          <div className="tab">روابط مهمة</div>
-          <div className="tab">تواصل معنا</div>
+      <div className="HeaderContainer">
+        <div className="img">
+          <img src={ted} alt="Logo" width={250} />
         </div>
-      </div>
-      <div className="buttonsWrapper">
-      {/* <StyledButton>التسجيل</StyledButton>
-      <StyledButton>دخول</StyledButton> */}
+        <div className="menuWrapper">
+          <div className="menu">
+            <div className="tab">الرئيسية</div>
+            <div className="tab">حول</div>
+            <div className="tab">المجالات</div>
+            <div className="tab">المكتبة الرقمية</div>
+            <div className="tab">فكرة</div>
+            <div className="tab">المركز الإعلامي</div>
+            <div className="tab">روابط مهمة</div>
+            <div className="tab">تواصل معنا</div>
+          </div>
+        </div>
+        <div className="buttonsWrapper">
+        {/* <StyledButton>التسجيل</StyledButton>
+        <StyledButton>دخول</StyledButton> */}
+        </div>
       </div>
     </StyledHeader>
     <StyledContent height={"460px"}>
@@ -106,13 +108,17 @@ const Layout = ({ children }) => {
 
 export default Layout;
 const StyledHeader = styled.header`
-background: #FFFFFF;
 box-shadow: 0px 1px 4px #BA9A5A;
-height: 108px;
 z-index:10;
-display:flex;
-justify-content:flex-start;
-padding:0 200px;
+background: #FFFFFF;
+width:100%;
+.HeaderContainer{
+  height: 108px;
+  margin: 0 auto;
+  width:fit-content;
+  display:flex;
+  justify-content:flex-start;
+}
 .menuWrapper{
   display:flex;
   flex-grow: 1;
@@ -133,8 +139,8 @@ padding:0 200px;
   }
 }
 .tab{
-  margin:10px 20px;
-  font-size:20px;
+  margin:10px 15px;
+  font-size:18px;
   font-weight:700;
   color:#333;
 }
