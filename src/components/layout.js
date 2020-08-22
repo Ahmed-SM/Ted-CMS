@@ -128,6 +128,9 @@ width:100%;
   justify-content:space-between;
   align-items:center;
   flex-wrap: wrap;
+  @media only screen and (max-width: 1100px) {
+    display:none;
+}
 }
 .img{
   min-width:250px;

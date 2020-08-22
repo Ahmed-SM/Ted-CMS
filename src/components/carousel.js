@@ -88,8 +88,8 @@ padding: 30px 0;
   }
   .overflow{
     overflow:hidden;
-    width:960px;  
-    margin:0 20px;
+    width:895px;  
+    margin:0 0px;
   }
   button{
     z-index:1;
