@@ -22,7 +22,7 @@ margin: 20px 20px;
 padding: 20px 20px;
 background: #FFFFFF;
 border-radius: 15px;
-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 box-sizing: border-box;
 position: relative;
 text-align:center;

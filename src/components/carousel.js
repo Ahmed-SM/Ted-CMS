@@ -34,7 +34,7 @@ const ServicesCarousel = ({ children, header }) => {
   return (
     <StyledContent height={"fit-content"} color={"white"} flexDirection={"column"}>
      {header}
-     <div  className={"flex"}>
+     <div  className={"flex-parent"}>
       <FontAwesomeIcon icon={faAngleRight} color={"#989898"} size={"3x"}  onClick={handleRightMove}/>
        <div className={"overflow"}>
         <div ref={ButtonRef} className={"flex testing"}>
@@ -56,6 +56,14 @@ display:flex;
 align-items:center;
 flex-direction:${props => props.flexDirection ? props.flexDirection : "row"};
 padding: 30px 0;
+.flex-parent{
+  display:flex;
+  width:100%;
+  align-items:center;
+  justify-content:center;
+  flex-wrap: nowrap;
+
+}
 .flex{
   display:flex;
   width:100%;
@@ -89,7 +97,7 @@ padding: 30px 0;
   .overflow{
     overflow:hidden;
     width:895px;  
-    margin:0 0px;
+    
   }
   button{
     z-index:1;
