@@ -8,24 +8,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import "react-multi-carousel/lib/styles.css";
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby";
 import styled from "styled-components"
 import ted from '../images/ted.png'; 
-import main2 from '../assets/main2.png'; 
-import icon1 from '../assets/1icon.png'; 
-import label1 from '../assets/1.png'; 
-import label2 from '../assets/2.png'; 
-import label3 from '../assets/3.png'; 
-import label4 from '../assets/4.png'; 
-import label5 from '../assets/5.png'; 
-import icon2 from '../assets/2icon.png'; 
-import icon3 from '../assets/3icon.png'; 
-import icon4 from '../assets/4icon.png'; 
-import icon5 from '../assets/5icon.png'; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMars } from '@fortawesome/free-solid-svg-icons';
-import Card from "./card";
-import ServicesCarousel from "./carousel";
 import Header from "./header"
 import "./layout.css"
 
@@ -49,14 +34,30 @@ const Layout = ({ children }) => {
         </div>
         <div className="menuWrapper">
           <div className="menu">
+          <Link to="/الرئيسية/">
             <div className="tab">الرئيسية</div>
+          </Link>
+          <Link to="/حول/">
             <div className="tab">حول</div>
+          </Link>
+          <Link to="/المجالات/">
             <div className="tab">المجالات</div>
+          </Link>
+          <Link to="/المكتبة-الرقمية/">
             <div className="tab">المكتبة الرقمية</div>
+          </Link>
+          <Link to="/فكرة/">
             <div className="tab">فكرة</div>
+          </Link>
+          <Link to="/المركز-الإعلامي/">
             <div className="tab">المركز الإعلامي</div>
+          </Link>
+          <Link to="/روابط-مهمة/">
             <div className="tab">روابط مهمة</div>
+          </Link>
+          <Link to="/تواصل-معنا">
             <div className="tab">تواصل معنا</div>
+          </Link>
           </div>
         </div>
         <div className="buttonsWrapper">
@@ -65,53 +66,7 @@ const Layout = ({ children }) => {
         </div>
       </div>
     </StyledHeader>
-    <StyledContent height={"460px"}>
-    <div className={"flex-main"}>
-      <div>
-        <img src={main2} alt="Logo" width={420} />
-      </div>
-      <div className={"flex-col"}>
-        <h2>التعليم الإلكتروني</h2>
-        <p>تعلم وأنت في مكانك</p>
-      </div>
-    </div>
-    </StyledContent>
-        <ServicesCarousel header={ <h2 className={"content-header--red"}><span className={"normal"}>المجالات</span> التعليمية </h2>}>
-        <Card title={"مهارات"}></Card>
-        <Card title={"قراءة في كتاب "}></Card>
-        <Card title={"ساعة معرفة"}></Card>
-      </ServicesCarousel>
-    <StyledContent color={"linear-gradient(269.68deg, #BA9A5A 0.06%, rgba(186, 154, 58, 0.87) 99.93%)"} height={"fit-content"} flexDirection={"column"}>
-    <h2 className={"content-header--white"}><span className={"normal"}>كيفية</span> التعلم </h2>
-    <div className={"learning"} >
-      <div>
-        <img src={icon1} alt="Logo" width={150} />
-        <img src={label1} alt="Logo" width={150} />
-      </div>
-      <div>
-        <img src={icon2} alt="Logo" width={150} />
-        <img src={label2} alt="Logo" width={150} />
-      </div>
-      <div>
-        <img src={icon3} alt="Logo" width={150} />
-        <img src={label3} alt="Logo" width={150} />
-      </div>
-      <div>
-        <img src={icon4} alt="Logo" width={150} />
-        <img src={label4} alt="Logo" width={150} />
-      </div>
-      <div>
-        <img src={icon5} alt="Logo" width={150} />
-        <img src={label5} alt="Logo" width={150} />
-      </div>
-    </div>
-    </StyledContent>
-      <ServicesCarousel header={ <h2 className={"content-header--red"}><span className={"normal"}>أخر</span> الأخبار </h2>}>
-        <Card title={"الخبر الأول"}></Card>
-        <Card title={"الخبر الثاني"}></Card>
-        <Card title={"الخبر الثالث"}></Card>
-      </ServicesCarousel>
-    <StyledContent height={"250px"}></StyledContent>
+      {children}
     <StyledFooter>
       <div>
         <img src={ted} alt="Logo" width={170} />
