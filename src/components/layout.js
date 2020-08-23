@@ -30,7 +30,9 @@ const Layout = ({ children }) => {
     <StyledHeader>
       <div className="HeaderContainer">
         <div className="img">
+      <Link to="/">
           <img src={ted} alt="Logo" width={250} />
+      </Link>
         </div>
         <div className="menuWrapper">
           <div className="menu">
@@ -123,8 +125,11 @@ a{
   display:flex;
   align-items:center;
   flex-grow: 0.1;
-  &> *{
+  a > img {
     margin-bottom: 0;
+    &:hover{
+      transform:scale(1.01);
+    }
   }
 }
 .tab{
