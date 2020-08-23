@@ -13,6 +13,11 @@ import styled from "styled-components"
 import ted from '../images/ted.png'; 
 import main2 from '../assets/main2.png'; 
 import icon1 from '../assets/1icon.png'; 
+import label1 from '../assets/1.png'; 
+import label2 from '../assets/2.png'; 
+import label3 from '../assets/3.png'; 
+import label4 from '../assets/4.png'; 
+import label5 from '../assets/5.png'; 
 import icon2 from '../assets/2icon.png'; 
 import icon3 from '../assets/3icon.png'; 
 import icon4 from '../assets/4icon.png'; 
@@ -79,11 +84,26 @@ const Layout = ({ children }) => {
     <StyledContent color={"linear-gradient(269.68deg, #BA9A5A 0.06%, rgba(186, 154, 58, 0.87) 99.93%)"} height={"fit-content"} flexDirection={"column"}>
     <h2 className={"content-header--white"}><span className={"normal"}>كيفية</span> التعلم </h2>
     <div className={"learning"} >
-      <img src={icon1} alt="Logo" width={150} />
-      <img src={icon2} alt="Logo" width={150} />
-      <img src={icon3} alt="Logo" width={150} />
-      <img src={icon4} alt="Logo" width={150} />
-      <img src={icon5} alt="Logo" width={150} />
+      <div>
+        <img src={icon1} alt="Logo" width={150} />
+        <img src={label1} alt="Logo" width={150} />
+      </div>
+      <div>
+        <img src={icon2} alt="Logo" width={150} />
+        <img src={label2} alt="Logo" width={150} />
+      </div>
+      <div>
+        <img src={icon3} alt="Logo" width={150} />
+        <img src={label3} alt="Logo" width={150} />
+      </div>
+      <div>
+        <img src={icon4} alt="Logo" width={150} />
+        <img src={label4} alt="Logo" width={150} />
+      </div>
+      <div>
+        <img src={icon5} alt="Logo" width={150} />
+        <img src={label5} alt="Logo" width={150} />
+      </div>
     </div>
     </StyledContent>
       <ServicesCarousel header={ <h2 className={"content-header--red"}><span className={"normal"}>أخر</span> الأخبار </h2>}>
@@ -225,8 +245,14 @@ padding: 30px 0;
     flex-wrap: wrap;
     justify-content:center;
 
-    &>*{
+    &>div{
       margin:20px;
+      display:flex;
+      flex-direction:column;
+
+      &>img{
+        margin-bottom:20px;
+      }
     }
   }
 `;
