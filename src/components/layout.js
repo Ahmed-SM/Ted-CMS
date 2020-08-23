@@ -111,6 +111,12 @@ width:100%;
   @media only screen and (max-width: 1100px) {
     display:none;
 }
+a{
+  text-decoration: none;
+  &:hover{
+    transform:scale(1.04);
+  }
+}
 }
 .img{
   min-width:250px;
