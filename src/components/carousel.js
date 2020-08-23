@@ -35,13 +35,13 @@ const ServicesCarousel = ({ children, header }) => {
     <StyledContent height={"fit-content"} color={"white"} flexDirection={"column"}>
      {header}
      <div  className={"flex-parent"}>
-      <FontAwesomeIcon icon={faAngleRight} color={"#989898"} size={"3x"}  onClick={handleRightMove}/>
+      <FontAwesomeIcon  className={"pointer"}  icon={faAngleRight} color={"#989898"} size={"3x"}  onClick={handleRightMove}/>
        <div className={"overflow"}>
         <div ref={ButtonRef} className={"flex testing"}>
           {children}
         </div>
        </div>
-       <FontAwesomeIcon icon={faAngleLeft} color={"#989898"} size={"3x"}  onClick={handleLeftMove}/>
+       <FontAwesomeIcon className={"pointer"}  icon={faAngleLeft} color={"#989898"} size={"3x"}  onClick={handleLeftMove}/>
      </div>
  
     </StyledContent>
@@ -71,7 +71,7 @@ padding: 30px 0;
   justify-content:center;
   flex-wrap: nowrap;
   transform: translateX(0px);
-  transition: transform 1s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
 }
 .content-header--red{
@@ -101,6 +101,9 @@ padding: 30px 0;
   }
   button{
     z-index:1;
+  }
+  .pointer{
+    cursor:pointer;
   }
   overflow:hidden;
 `;
