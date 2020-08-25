@@ -4,8 +4,8 @@ import { faAngleRight,  faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import styled from "styled-components";
 
 
-const ServicesCarousel = ({ children, header, color="white", width }) => {
-  const [move, setMove] = useState({value:"0", count:0, shift:"304"})
+const ServicesCarousel = ({ children, header, color="white", width, shift="304"}) => {
+  const [move, setMove] = useState({value:"0", count:0, shift:shift})
   const ButtonRef = useRef();
   const handleRightMove = () => {
     if(move.count > -ButtonRef.current.childElementCount + (ButtonRef.current.childElementCount /2) +1){
@@ -26,7 +26,7 @@ const ServicesCarousel = ({ children, header, color="white", width }) => {
   };
   useEffect(()=>{
   if ( ButtonRef.current.childElementCount % 2 == 0 && move.value === "0") {
-    setMove(prevState  =>({ ...prevState , value:"149"}))
+    setMove(prevState  =>({ ...prevState , value:prevState.shift/2}))
   }
     ButtonRef.current.style.transform = `translateX(${move.value}px)`;
   },[move.value])

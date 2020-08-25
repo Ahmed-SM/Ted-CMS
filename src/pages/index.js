@@ -128,7 +128,7 @@ return(
           <Card title={"الخبر الثاني"}></Card>
           <Card title={"الخبر الثالث"}></Card>
         </ServicesCarousel>
-      <ServicesCarousel color={"#dbe7f0"} width={"100%"}>
+      <ServicesCarousel color={"#dbe7f0"} width={"100%"} shift={"250"}>
         <img src={partners1} alt="Logo" width={250} />
         <img src={partners2} alt="Logo" width={250} />
         <img src={partners3} alt="Logo" width={250} />
