@@ -4,7 +4,7 @@ import { faAngleRight,  faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import styled from "styled-components";
 
 
-const ServicesCarousel = ({ children, header }) => {
+const ServicesCarousel = ({ children, header, color="white", width }) => {
   const [move, setMove] = useState({value:"0", count:0, shift:"304"})
   const ButtonRef = useRef();
   const handleRightMove = () => {
@@ -32,7 +32,7 @@ const ServicesCarousel = ({ children, header }) => {
   },[move.value])
 
   return (
-    <StyledContent height={"fit-content"} color={"white"} flexDirection={"column"}>
+    <StyledContent height={"fit-content"} color={color} width={width} flexDirection={"column"}>
      {header}
      <div  className={"flex-parent"}>
       <FontAwesomeIcon  className={"pointer"}  icon={faAngleRight} color={"#989898"} size={"3x"}  onClick={handleRightMove}/>
@@ -96,7 +96,7 @@ padding: 30px 0;
   }
   .overflow{
     overflow:hidden;
-    width:895px;  
+    width:${props => props.width ? props.width : "895px"};  
     
   }
   button{

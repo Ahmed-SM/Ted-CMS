@@ -17,6 +17,43 @@ import icon2 from '../assets/2icon.png';
 import icon3 from '../assets/3icon.png'; 
 import icon4 from '../assets/4icon.png'; 
 import icon5 from '../assets/5icon.png'; 
+import partners1 from '../assets/partners/1.jpg'; 
+import partners2 from '../assets/partners/2.jpg'; 
+import partners3 from '../assets/partners/3.jpg'; 
+import partners4 from '../assets/partners/4.jpg'; 
+import partners5 from '../assets/partners/5.jpg'; 
+import partners6 from '../assets/partners/6.jpg'; 
+import partners7 from '../assets/partners/7.jpg'; 
+import partners8 from '../assets/partners/8.jpg'; 
+import partners9 from '../assets/partners/9.jpg'; 
+import partners10 from '../assets/partners/10.jpg'; 
+import partners11 from '../assets/partners/11.jpg'; 
+import partners12 from '../assets/partners/12.jpg'; 
+import partners13 from '../assets/partners/13.jpg'; 
+import partners14 from '../assets/partners/14.jpg'; 
+import partners15 from '../assets/partners/15.jpg'; 
+import partners16 from '../assets/partners/16.jpg'; 
+import partners17 from '../assets/partners/17.jpg'; 
+import partners18 from '../assets/partners/18.jpg'; 
+import partners19 from '../assets/partners/19.jpg'; 
+import partners20 from '../assets/partners/20.jpg'; 
+import partners21 from '../assets/partners/21.jpg'; 
+import partners22 from '../assets/partners/22.jpg'; 
+import partners23 from '../assets/partners/23.jpg'; 
+import partners24 from '../assets/partners/24.jpg'; 
+import partners25 from '../assets/partners/25.jpg'; 
+import partners26 from '../assets/partners/26.jpg'; 
+import partners27 from '../assets/partners/27.jpg'; 
+import partners28 from '../assets/partners/28.jpg'; 
+import partners29 from '../assets/partners/29.jpg'; 
+import partners30 from '../assets/partners/30.jpg'; 
+import partners31 from '../assets/partners/31.jpg'; 
+import partners32 from '../assets/partners/32.jpg'; 
+import partners33 from '../assets/partners/33.jpg'; 
+import partners34 from '../assets/partners/34.jpg'; 
+import partners35 from '../assets/partners/35.jpg'; 
+import partners36 from '../assets/partners/36.jpg'; 
+import partners37 from '../assets/partners/37.jpg'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMars } from '@fortawesome/free-solid-svg-icons';
 import Card from "../components/card";
@@ -91,7 +128,45 @@ return(
           <Card title={"الخبر الثاني"}></Card>
           <Card title={"الخبر الثالث"}></Card>
         </ServicesCarousel>
-      <StyledContent height={"250px"}></StyledContent>
+      <ServicesCarousel color={"#dbe7f0"} width={"100%"}>
+        <img src={partners1} alt="Logo" width={250} />
+        <img src={partners2} alt="Logo" width={250} />
+        <img src={partners3} alt="Logo" width={250} />
+        <img src={partners4} alt="Logo" width={250} />
+        <img src={partners5} alt="Logo" width={250} />
+        <img src={partners6} alt="Logo" width={250} />
+        <img src={partners7} alt="Logo" width={250} />
+        <img src={partners8} alt="Logo" width={250} />
+        <img src={partners9} alt="Logo" width={250} />
+        <img src={partners10} alt="Logo" width={250} />
+        <img src={partners11} alt="Logo" width={250} />
+        <img src={partners12} alt="Logo" width={250} />
+        <img src={partners13} alt="Logo" width={250} />
+        <img src={partners14} alt="Logo" width={250} />
+        <img src={partners15} alt="Logo" width={250} />
+        <img src={partners16} alt="Logo" width={250} />
+        <img src={partners17} alt="Logo" width={250} />
+        <img src={partners18} alt="Logo" width={250} />
+        <img src={partners19} alt="Logo" width={250} />
+        <img src={partners20} alt="Logo" width={250} />
+        <img src={partners21} alt="Logo" width={250} />
+        <img src={partners22} alt="Logo" width={250} />
+        <img src={partners23} alt="Logo" width={250} />
+        <img src={partners24} alt="Logo" width={250} />
+        <img src={partners25} alt="Logo" width={250} />
+        <img src={partners26} alt="Logo" width={250} />
+        <img src={partners27} alt="Logo" width={250} />
+        <img src={partners28} alt="Logo" width={250} />
+        <img src={partners29} alt="Logo" width={250} />
+        <img src={partners30} alt="Logo" width={250} />
+        <img src={partners31} alt="Logo" width={250} />
+        <img src={partners32} alt="Logo" width={250} />
+        <img src={partners33} alt="Logo" width={250} />
+        <img src={partners34} alt="Logo" width={250} />
+        <img src={partners35} alt="Logo" width={250} />
+        <img src={partners36} alt="Logo" width={250} />
+        <img src={partners37} alt="Logo" width={250} />
+        </ServicesCarousel>
   </Layout>
 )}
 
