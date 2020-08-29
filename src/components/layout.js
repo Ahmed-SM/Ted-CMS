@@ -36,10 +36,10 @@ const Layout = ({ children }) => {
         </div>
         <div className="menuWrapper">
           <div className="menu">
-          <Link to="/الرئيسية/">
+          <Link to="/">
             <div className="tab">الرئيسية</div>
           </Link>
-          <Link to="/حول/">
+          <Link to="/about/">
             <div className="tab">حول</div>
           </Link>
           <Link to="/المجالات/">
@@ -73,14 +73,21 @@ const Layout = ({ children }) => {
       <div>
         <img src={ted} alt="Logo" width={170} />
       </div>
-      <div>
-        جميع الحقوق محفوظة منطقة رأس الخيمة التعليمة
+      <div className={"footer-group"}>
+        <div>t f i y</div>
+        <p>جميع الحقوق محفوظة منطقة رأس الخيمة التعليمة</p>
       </div>
-      <div>
-       منطقة رأس الخيمة التعليمة
+      <div className={"footer-group"}>
+        <div>من نحن</div>
+        <div>مركز المساعدة</div>
+        <div>الفريق</div>
+        <div>تواصل معنا</div>
       </div>
-      <div>
-       منطقة رأس الخيمة التعليمة
+      <div className={"footer-group"}>
+        <div>الشروط و الاحكام</div>
+        <div>سياسة خصوصية</div>
+        <div>الشروط والاحكام</div>
+        <div>منطقة رأس الخيمة التعليمة</div>
       </div>
     </StyledFooter>
     </>
@@ -146,13 +153,38 @@ a{
 const StyledFooter = styled.footer`
 background: #FFFFFF;
 box-shadow: 0px -1px 4px #BA9A5A;
-height: 108px;
+padding:15px 0px;
 z-index:10;
 display:flex;
+flex-wrap: nowrap;
 justify-content:space-around;
 align-items:center;
+@media only screen and (max-width: 1100px) {
+  justify-content:center;
+  flex-direction:column;
+}
+
 img{
   margin-bottom:0;
+}
+.footer-group{
+  display:flex;
+  flex-direction:column;
+  margin:5px 0px;
+  @media only screen and (max-width: 1100px) {
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+ &>div{
+   width:150px;
+  font-weight: 600;
+  font-size: 11px;
+ }
+ &>p{
+ font-weight: 600;
+ font-size: 11px;
+}
 }
 `;
 const StyledContent = styled.div`

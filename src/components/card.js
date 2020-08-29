@@ -3,8 +3,9 @@ import React from "react"
 import styled from "styled-components"
 
 
-const Card = ({title}) => (
+const Card = ({title, path}) => (
     <StyledCard>
+      <Link to={path}>
       <StyledImgWrapper>
 
       </StyledImgWrapper>
@@ -12,6 +13,7 @@ const Card = ({title}) => (
       <div className="buttonsWrapper">
         <StyledButton>أبدء</StyledButton>
       </div>
+      </Link>
   </StyledCard>
 )
 export default Card;
@@ -26,8 +28,16 @@ box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 box-sizing: border-box;
 position: relative;
 text-align:center;
+transition: transform 0.3s ease-in-out;
+&:hover{
+  transform:scale(1.05);
+}
 h3{
   margin:20px;
+  color: hsla(0, 0%, 0%, 0.8);
+}
+a{
+  text-decoration: none;
 }
 
 `;
@@ -45,4 +55,10 @@ const StyledButton = styled.button`
   height:35px;
   width:90px;
   margin:0 5px;
+  cursor:pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover{
+    background: linear-gradient(45deg, #b52b47 6%, #B70025 53%) !important;
+    background-image: linear-gradient(45deg, #b52b47 6%, #B70025 53%) !important;
+  }
 `;

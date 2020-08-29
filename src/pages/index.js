@@ -54,8 +54,6 @@ import partners34 from '../assets/partners/34.jpg';
 import partners35 from '../assets/partners/35.jpg'; 
 import partners36 from '../assets/partners/36.jpg'; 
 import partners37 from '../assets/partners/37.jpg'; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMars } from '@fortawesome/free-solid-svg-icons';
 import Card from "../components/card";
 import ServicesCarousel from "../components/carousel";
 
@@ -124,9 +122,14 @@ return(
       </div>
       </StyledContent>
         <ServicesCarousel header={ <h2 className={"content-header--red"}><span className={"normal"}>أخر</span> الأخبار </h2>}>
-          <Card title={"الخبر الأول"}></Card>
-          <Card title={"الخبر الثاني"}></Card>
-          <Card title={"الخبر الثالث"}></Card>
+        {data.allMarkdownRemark.edges.map((edge, index)=>{
+        return(
+          <>
+          <Card title={"الخبر الأول"} index={index} path={`${edge.node.fields.slug}`}/>
+          </>
+        )
+
+      })}
         </ServicesCarousel>
       <ServicesCarousel color={"#dbe7f0"} width={"100%"} shift={"250"}>
         <img src={partners1} alt="Logo" width={250} />

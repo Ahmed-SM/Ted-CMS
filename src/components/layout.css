@@ -19,13 +19,15 @@ body,
   display: flex;
   justify-content: stretch;
   flex-flow: column;
-  height: 100%;
-  background:  #f0f0eb;
+  flex-grow: 1;
+  flex:1;
+  background:  white;
   margin: 0;
   font-family: 'Tajawal', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body,
 #___gatsby{
  direction: rtl;
@@ -38,7 +40,10 @@ body,
   box-sizing: border-box;
 }
 
-body { font-family: sans-serif; }
+body { 
+  font-family: sans-serif;
+  min-height: 100vh;
+ }
 
 .gallery {
   background: #EEE;
