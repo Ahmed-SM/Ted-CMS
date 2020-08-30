@@ -9,7 +9,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import "react-multi-carousel/lib/styles.css";
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby";
-import styled from "styled-components"
+import styled from "styled-components";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter,   faFacebookF,  faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import ted from '../images/ted.png'; 
 import Header from "./header"
 import "./layout.css"
@@ -74,7 +76,20 @@ const Layout = ({ children }) => {
         <img src={ted} alt="Logo" width={170} />
       </div>
       <div className={"footer-group"}>
-        <div>t f i y</div>
+        <div>
+          <a href="https://www.twitter.com/MOEUAE_RAK">
+            <FontAwesomeIcon   icon={faTwitter} color={"crimson"} size={"2x"}></FontAwesomeIcon>
+          </a>
+          <a href="https://www.facebook.com">
+          <FontAwesomeIcon   icon={faFacebookF} color={"crimson"} size={"2x"}></FontAwesomeIcon>
+          </a>
+          <a href="https://www.youtube.com">
+          <FontAwesomeIcon   icon={faYoutube} color={"crimson"} size={"2x"}></FontAwesomeIcon>
+          </a>
+          <a href="https://www.instagram.com/MOEUAE_RAK">
+          <FontAwesomeIcon   icon={faInstagram} color={"crimson"} size={"2x"}></FontAwesomeIcon>
+          </a>
+        </div>
         <p>جميع الحقوق محفوظة منطقة رأس الخيمة التعليمة</p>
       </div>
       <div className={"footer-group"}>
@@ -180,6 +195,9 @@ img{
    width:150px;
   font-weight: 600;
   font-size: 11px;
+ }
+ svg{
+  margin: 0 5px;
  }
  &>p{
  font-weight: 600;
