@@ -13,3 +13,10 @@ collections:
     fields:
       - { name: "title", label: "Title" }
       - { name: body, label: Body, widget: markdown }
+  - name: "news"
+    label: "إضافة اخبار"
+    folder: "news"
+    create: true
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: body, label: Body, widget: markdown }
