@@ -56,20 +56,23 @@ import partners36 from '../assets/partners/36.jpg';
 import partners37 from '../assets/partners/37.jpg'; 
 import Card from "../components/card";
 import ServicesCarousel from "../components/carousel";
+import LatestNews from "../components/latestNews";
+
 
 const IndexPage = () => {
+
   const data = useStaticQuery(graphql`
   query {
-    allMarkdownRemark{
-      edges{
-        node{
-          frontmatter{
+    allMarkdownRemark(filter: { fileAbsolutePath: {regex : "\/posts/"} }) {
+      edges {
+        node {
+          frontmatter {
             title
           }
           internal{
-            content
-          }
-          fields{
+              content
+            }
+          fields {
             slug
           }
         }
@@ -92,9 +95,13 @@ return(
       </div>
       </StyledContent>
           <ServicesCarousel header={ <h2 className={"content-header--red"}><span className={"normal"}>المجالات</span> التعليمية </h2>}>
-          <Card title={"مهارات"}></Card>
-          <Card title={"قراءة في كتاب "}></Card>
-          <Card title={"ساعة معرفة"}></Card>
+          {data.allMarkdownRemark.edges.map((edge, index)=>{
+        return(
+        <>
+        <Card title={`${edge.node.frontmatter.title}`} index={index} path={`${edge.node.fields.slug}`}/>
+        </>
+        )
+        })}
         </ServicesCarousel>
       <StyledContent color={"linear-gradient(269.68deg, #BA9A5A 0.06%, rgba(186, 154, 58, 0.87) 99.93%)"} height={"fit-content"} flexDirection={"column"}>
       <h2 className={"content-header--white"}><span className={"normal"}>كيفية</span> التعلم </h2>
@@ -121,16 +128,7 @@ return(
         </div>
       </div>
       </StyledContent>
-        <ServicesCarousel header={ <h2 className={"content-header--red"}><span className={"normal"}>أخر</span> الأخبار </h2>}>
-        {data.allMarkdownRemark.edges.map((edge, index)=>{
-        return(
-          <>
-          <Card title={"الخبر الأول"} index={index} path={`${edge.node.fields.slug}`}/>
-          </>
-        )
-
-      })}
-        </ServicesCarousel>
+     <LatestNews/>
       <ServicesCarousel color={"#dbe7f0"} width={"100%"} shift={"250"}>
         <img src={partners1} alt="Logo" width={250} />
         <img src={partners2} alt="Logo" width={250} />

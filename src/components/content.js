@@ -21,7 +21,7 @@ const StyledContent = styled.div`
     align-content: space-around;
     margin: 60px 0 10px 0;
     padding: 0 10%;
-    
+    flex: 1;
 
     .title {
     font-style: normal;
