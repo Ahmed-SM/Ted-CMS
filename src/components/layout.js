@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
           <Link to="/المجالات/">
             <div className="tab">المجالات</div>
           </Link>
-          <Link to="/المكتبة-الرقمية/">
+          <Link to="/digitalLibrary/">
             <div className="tab">المكتبة الرقمية</div>
           </Link>
           <Link to="/فكرة/">
