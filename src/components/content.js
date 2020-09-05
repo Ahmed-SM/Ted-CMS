@@ -18,7 +18,7 @@ const StyledContent = styled.div`
     width:100%;
     justify-content: center;
     align-items: center;
-    margin: 60px auto 10px auto;
+    margin: 10px auto 10px auto;
     flex: 1;
     
     .title {

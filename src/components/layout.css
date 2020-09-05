@@ -44,7 +44,10 @@ body {
   font-family: sans-serif;
   min-height: 100vh;
  }
-
+P{
+  text-align: justify;
+  text-justify: inter-word;
+}
 .gallery {
   background: #EEE;
 }
