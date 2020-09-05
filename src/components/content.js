@@ -3,8 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
-const Content = ({children }) => (
-  <StyledContent >
+const Content = ({children, flexDirection="column" }) => (
+  <StyledContent flexDirection={flexDirection}>
           {children}
   </StyledContent>
 )
@@ -14,7 +14,7 @@ export default Content;
 const StyledContent = styled.div`
     display:flex;
     flex-wrap:nowrap;
-    flex-direction: column;
+    flex-direction:${props => props.flexDirection ? props.flexDirection : "row"};
     width:100%;
     justify-content: center;
     align-items: center;
