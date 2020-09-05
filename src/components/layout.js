@@ -198,6 +198,7 @@ img{
  }
  svg{
   margin: 0 5px;
+  width:22px;
  }
  &>p{
  font-weight: 600;
