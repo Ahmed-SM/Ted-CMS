@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
-const Content = ({ ViewTitle, ViewSubTitle, children }) => (
+const Content = ({children }) => (
   <StyledContent >
           {children}
   </StyledContent>
@@ -13,16 +13,14 @@ const Content = ({ ViewTitle, ViewSubTitle, children }) => (
 export default Content;
 const StyledContent = styled.div`
     display:flex;
-    flex-wrap:wrap;
-    flex-direction: row-reverse;
+    flex-wrap:nowrap;
+    flex-direction: column;
     width:100%;
-    justify-content: space-around;
-    align-items: space-around;
-    align-content: space-around;
-    margin: 60px 0 10px 0;
-    padding: 0 10%;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto 10px auto;
     flex: 1;
-
+    
     .title {
     font-style: normal;
     font-weight: 300;
